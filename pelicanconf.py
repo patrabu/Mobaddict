@@ -10,12 +10,17 @@ PATH = 'content'
 ARTICLE_PATHS = ['articles']
 ARTICLE_SAVE_AS = 'articles/{slug}.html'
 ARTICLE_URL = 'articles/{slug}.html'
-STATIC_PATHS = ['images']
+
+STATIC_PATHS = ['images', 'extra/robots.txt', 'extra/favicon.ico']
+EXTRA_PATH_METADATA = {
+   'extra/robots.txt': {'path': 'robots.txt'},
+   'extra/favicon.ico': {'path': 'favicon.ico'}
+}
 
 TIMEZONE = 'Europe/Paris'
 
 DEFAULT_LANG = u'fr'
-THEME = 'dev-random'
+THEME = 'mobaddict'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -36,3 +41,6 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'sitemap')
+SITEMAP_SAVE_AS = 'sitemap.xml'
